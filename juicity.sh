@@ -1,3 +1,5 @@
+#!/bin/bash
+#t.me/p_tech2024
 # Function to print characters with delay
 print_with_delay() {
     text=$1
