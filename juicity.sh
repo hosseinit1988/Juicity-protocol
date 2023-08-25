@@ -19,8 +19,8 @@ echo -e "\n"
 echo
 echo "Select an option:"
 echo "------------------------------"
-echo "1) Install service"
-echo "2) Uninstall service"
+echo "1) Install Juicity"
+echo "2) Uninstall juicity"
 echo "------------------------------"
 read -p "Please select: " option
 
