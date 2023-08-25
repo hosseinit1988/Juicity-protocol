@@ -22,7 +22,7 @@ echo "------------------------------"
 echo "1) Install Juicity"
 echo "2) Uninstall juicity"
 echo "------------------------------"
-read -p "Please select: " option
+read -p "Please select : " option
 
 case $option in
     1)
