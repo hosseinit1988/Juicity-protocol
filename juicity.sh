@@ -1,7 +1,3 @@
-#!/bin/bash
-
-#https://t.me/P_tech2024 
-
 # Function to print characters with delay
 print_with_delay() {
     text=$1
@@ -17,7 +13,18 @@ echo -e "\n"
 print_with_delay "Welcome To Juicity --->Created by :Peyman --> https://github.com/Ptechgithub" 0.02
 echo -e "\n"
 
-# Install required packages
+# Display options
+echo
+echo "Select an option:"
+echo "------------------------------"
+echo "1) Install service"
+echo "2) Uninstall service"
+echo "------------------------------"
+read -p "Please select: " option
+
+case $option in
+    1)
+ # Install required packages
 sudo apt-get update
 sudo apt-get install -y unzip jq
 
@@ -145,5 +152,19 @@ case $choice in
         echo "Link with IPv6: -->  $SHARE_LINK_IPV6"
         echo "----------------------------------------------------------"
         echo "$SHARE_LINK_IPV6" > link.txt  #save
+        esac
+        ;;
+    2)
+        # Uninstall functionality
+        sudo systemctl stop juicity
+        sudo systemctl disable juicity
+        sudo rm /etc/systemd/system/juicity.service
+        sudo systemctl daemon-reload
+        sudo rm -rf /root/juicity
+        sudo systemctl reset-failed
+        echo "Uninstall completed."
+        ;;
+    *)
+        echo "Invalid option selected."
         ;;
 esac
