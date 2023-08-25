@@ -157,14 +157,20 @@ case $choice in
         esac
         ;;
     2)
-        # Uninstall functionality
-        sudo systemctl stop juicity
-        sudo systemctl disable juicity
-        sudo rm /etc/systemd/system/juicity.service
-        sudo systemctl daemon-reload
-        sudo rm -rf /root/juicity
-        sudo systemctl reset-failed
-        echo "Uninstall completed."
+        # Check if Juicity is installed
+        if [[ -f /etc/systemd/system/juicity.service ]]; then
+            # Juicity is installed, perform uninstallation
+            sudo systemctl stop juicity
+            sudo systemctl disable juicity
+            sudo rm /etc/systemd/system/juicity.service
+            sudo systemctl daemon-reload
+            sudo rm -rf /root/juicity
+            sudo systemctl reset-failed
+            echo "Uninstall completed."
+        else
+            # Juicity is not installed
+            echo "Juicity is not installed."
+        fi
         ;;
     *)
         echo "Invalid option selected."
