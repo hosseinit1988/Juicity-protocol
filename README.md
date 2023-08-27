@@ -13,7 +13,7 @@ Juicity installer
 bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/Juicity/main/juicity.sh)
 
 ```
-
+![2](https://raw.githubusercontent.com/Ptechgithub/Juicity/main/media/2.jpg)
 .
 
 ## مشاهده کانفیگ ساخته شده:
