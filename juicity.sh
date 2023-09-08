@@ -12,7 +12,7 @@ print_with_delay() {
 
 # Introduction animation
 echo -e "\n"
-print_with_delay "Welcome To Juicity --->Created by :Peyman --> https://github.com/Ptechgithub" 0.02
+print_with_delay "Welcome To Juicity --->Created by :HosseinIT --> https://github.com/hosseinit1988/Juicity-protocol" 0.03
 echo -e "\n"
 
 # Display options
